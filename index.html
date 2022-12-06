@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Squirrel API</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Squirrel API</h1>
+        </div>
+        
+        <div class="squirrelID">
+        <input id="squirrelIDBox" required placeholder="Enter Squirrel ID"> 
+        </div>
+        <br> 
+
+        <div class="options">
+        <button id="get" onclick="getData()">GET</button>
+        <button onclick="showCreateTable()">CREATE</button>
+        <button id="delete" onclick="deleteData()">DELETE</button>
+        <button onclick="showUpdateTable()">UPDATE</button>
+        </div>
+
+        <br> <br>
+        <div class="displayTable">
+            <table id="dataTable">
+                <tr>
+                    <th>ID</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                    <th>Primary Fur Color</th>
+                    <th>Highlight Fur Color</th>
+                    <th>Nearby Building</th>
+                    <th>Above Ground</th>
+                </tr>
+            <tbody>
+            </tbody>
+            </table>
+        </div>
+        <br> <br>
+
+        <div id="createTable" class="createTable" style="visibility: hidden;">
+            <form id="addSquirrel">
+                <label for="time">Time: </label>
+                <select id="time" name="time">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+
+                <label for="date">Date: </label>
+                <input id="date" name="date">
+
+                <label for="age">Age: </label>
+                <select id="age" name="age">
+                    <option value="Child">Child</option>
+                    <option value="Juvenile">Juvenile</option>
+                    <option value="Adult">Adult</option>
+                  </select>
+
+                <label for="primaryColor">Primary Fur Color: </label>
+                <input id="primaryColor" name="primaryColor">
+
+                <label for="highlightColor">Highlight Fur Color: </label>
+                <input id="highlightColor" name="highlightColor">
+
+                <label for="nearbyBuilding">Nearby Building: </label>
+                <input id="nearbyBuilding" name="nearbyBuilding">
+
+                <label for="aboveGroundLabel">Above Ground:
+                <label for="aboveGroundTrue">True
+                <input id="aboveGroundTrue" name="aboveGround" type="radio" value="true"></label>
+                <label for="aboveGroundFalse">False
+                <input id="aboveGroundFalse" name="aboveGround" type="radio" value="false"></label>
+                </label>
+            </form>
+            <button id="add" onclick="addSquirrel()" style="visibility: hidden;">Create Squirrel</button> <br>
+            <button id="update" onclick="updateSquirrel()" style="visibility: hidden;">Update Squirrel</button>
+        </div>
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>

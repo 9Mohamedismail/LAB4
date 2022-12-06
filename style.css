@@ -1,0 +1,50 @@
+html * {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+table, th, td {
+    border:1px solid black;
+}
+
+label { 
+    display:block 
+}
+div.createTable{
+	max-width: 400px;
+	width: 100%;
+	background: #fff;
+	padding: 25px 30px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+	display: center;
+	border: 5px solid #cc0066;
+	border-radius: 10px;
+    text-align: center;
+}
+div.options{
+    text-align: center;
+}
+div.header{
+	text-align: center;
+}
+#squirrelIDBox{
+	text-align: center;
+}
+div.squirrelID{
+	text-align: center;
+}
+#dataTable{
+	max-width: 1000px;
+	width: 100%;
+	background: #fff;
+	padding: 25px 30px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+	display: center;
+	border: 5px solid #cc0066;
+	border-radius: 10px;
+    text-align: center;
+}
