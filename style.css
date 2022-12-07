@@ -2,11 +2,18 @@ html * {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
 }
-
+body {
+	border: 20px solid #40b1c8;
+}
 table, th, td {
     border:1px solid black;
+	background-color: gray;
 }
-
+img {
+	padding: 0px 5px;
+  	width: 50px;
+	display: inline-block;
+}
 label { 
     display:block 
 }
@@ -19,7 +26,7 @@ div.createTable{
 	margin-right: auto;
 	vertical-align: middle;
 	display: center;
-	border: 5px solid #cc0066;
+	border: 10px solid #40b1c8;
 	border-radius: 10px;
     text-align: center;
 }
@@ -27,10 +34,21 @@ div.options{
     text-align: center;
 }
 div.header{
+	border: 20px solid #40b1c8;
 	text-align: center;
 }
-#squirrelIDBox{
+div.header h1{
+	display: inline-block;
 	text-align: center;
+	font-size: 35px;
+}
+#squirrelIDBox{
+	background: white;
+	padding: 15px 100px;
+	display: center;
+	border: 2px solid black;
+	border-radius: 30px;
+    text-align: center;
 }
 div.squirrelID{
 	text-align: center;
@@ -44,7 +62,23 @@ div.squirrelID{
 	margin-right: auto;
 	vertical-align: middle;
 	display: center;
-	border: 5px solid #cc0066;
+	border: 5px solid #40b1c8;
 	border-radius: 10px;
+    text-align: center;
+}
+div.options button{
+	background: gray;
+	padding: 10px 30px;
+	display: center;
+	border: 2px solid black;
+	border-radius: 30px;
+    text-align: center;
+}
+#dataTable th{
+	background: gray;
+	padding: 1px 50px;
+	display: center;
+	border: 2px solid black;
+	border-radius: 5px;
     text-align: center;
 }
