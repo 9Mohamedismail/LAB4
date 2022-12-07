@@ -27,6 +27,7 @@ Author:
     ├── script.js
     ├── squirrel.png
     ├── style.css
+    ├── Squirrel_Frontend_Showcase.mp4
     └── readme.md
 ```
 
@@ -35,6 +36,7 @@ Author:
 - script.js contains all the javascript for this project
 - squirrel.png is for our logo
 - style.css contains our CSS for this project
+- Squirrel_Frontend_Showcase is a video that shows our entire front end without you having to download anything!
 
 <br>
 <hr>
