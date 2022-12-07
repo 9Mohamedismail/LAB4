@@ -3,13 +3,16 @@
     document.getElementById('update').style.visibility = "hidden";
     document.getElementById('add').style.visibility = "hidden";
     var requestedID = document.getElementById("squirrelIDBox").value
- 
+    if(requestedID == null || requestedID == ""){
+      alert("Please Enter Squirrel ID");
+    }else{
     fetch('http://localhost:3000/squirrels/' + requestedID)
        .then(res => res.json())
        .then(data => {
           console.log(data);
           makeDataTable(data)
-       })
+      })
+   }
  }
  
  function deleteData() {
@@ -17,6 +20,9 @@
     document.getElementById('update').style.visibility = "hidden";
     document.getElementById('add').style.visibility = "hidden";
     var requestedID = document.getElementById("squirrelIDBox").value
+    if(requestedID == null || requestedID == ""){
+      alert("Please Enter Squirrel ID");
+    }else{
     fetch('http://localhost:3000/squirrels/' + requestedID, {
           method: "DELETE"
        })
@@ -25,6 +31,7 @@
           console.log(data);
           makeDataTable(data)
        })
+   }
  }
  
  async function addSquirrel() {
@@ -64,7 +71,9 @@
     var displayData = document.getElementById("dataTable");
     var requestedID = document.getElementById("squirrelIDBox").value
     var row = displayData.insertRow(1);
- 
+    if(requestedID == null || requestedID == ""){
+      alert("Please Enter Squirrel ID");
+    }else{
     let headersList = {
        "Accept": "*/*",
        "Content-Type": "application/json"
@@ -91,6 +100,7 @@
     row.innerHTML = "Squirrel with that ID has been updated!"
     document.getElementById('createTable').style.visibility = "hidden";
     document.getElementById('update').style.visibility = "hidden";
+   }
  
  }
  
@@ -104,7 +114,9 @@
     var requestedID = document.getElementById("squirrelIDBox").value
     document.getElementById('add').style.visibility = 'hidden';
     document.getElementById('update').style.visibility = 'visible';
- 
+    if(requestedID == null || requestedID == ""){
+      alert("Please Enter Squirrel ID");
+    }else{
     fetch('http://localhost:3000/squirrels/' + requestedID)
        .then(res => res.json())
        .then(data => {
@@ -117,6 +129,7 @@
           document.getElementById("nearbyBuilding").value = data[0].nearby_building;
           document.getElementsByName("aboveGround").value = data[0].above_ground;
        })
+   }
  }
  
  function makeDataTable(data) {
